@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/transparency"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_dimen_100"
+        android:background="@color/translucence"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/base_dimen_30">
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/base_dimen_30"
+            android:paddingRight="@dimen/base_dimen_20"
+            android:src="@drawable/play_ctrl_back" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/image_back"
+            android:text="返回"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/txt_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textSize="@dimen/text_11" />
+
+        <ImageView
+            android:id="@+id/image_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/base_dimen_15"
+            android:layout_toLeftOf="@+id/txt_battery" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/base_dimen_15"
+            android:layout_toLeftOf="@+id/image_battery"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textSize="@dimen/text_11"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_dimen_100"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/translucence"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@id/exo_prev"
+            style="@style/ExoMediaButton.Previous"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@id/exo_rew"
+            style="@style/ExoMediaButton.Rewind"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@id/exo_shuffle"
+            style="@style/ExoMediaButton.Shuffle"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@id/exo_repeat_toggle"
+            style="@style/ExoMediaButton"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@id/exo_play"
+            style="@style/ExoMediaButton.Play"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20" />
+
+        <ImageButton
+            android:id="@id/exo_pause"
+            style="@style/ExoMediaButton.Pause"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20" />
+
+        <ImageButton
+            android:id="@id/exo_next"
+            style="@style/ExoMediaButton.Next"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20" />
+
+
+        <ImageButton
+            android:id="@id/exo_ffwd"
+            style="@style/ExoMediaButton.FastForward"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_marginLeft="@dimen/base_dimen_20" />
+
+
+        <cn.tqp.exoplayer.exoplayerui.ExoPlayerTimeBar
+            android:id="@id/exo_progress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/base_dimen_20"
+            android:layout_weight="1"
+            app:ad_marker_color="#999999"
+            app:ad_marker_width="@dimen/base_dimen_20"
+            app:bar_height="2dp"
+            app:buffered_color="#999999"
+            app:played_color="#f42c2c"
+            app:scrubber_disabled_size="@dimen/base_dimen_20"
+            app:scrubber_dragged_size="@dimen/base_dimen_20"
+            app:scrubber_drawable="@mipmap/play_ctrl_sound_ball"
+            app:touch_target_height="@dimen/base_dimen_20"
+            app:unplayed_color="#FFFFFF" />
+
+        <TextView
+            android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/base_dimen_8"
+            android:paddingRight="@dimen/base_dimen_8"
+            android:textColor="#FFBEBEBE"
+            android:textSize="@dimen/text_11"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="/"
+            android:textColor="#FFBEBEBE"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/base_dimen_8"
+            android:paddingRight="@dimen/base_dimen_8"
+            android:textColor="#FFBEBEBE"
+            android:textSize="@dimen/text_11"
+            android:layout_marginRight="@dimen/base_dimen_30"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/exo_resize_screen"
+            android:layout_width="@dimen/base_dimen_60"
+            android:layout_height="@dimen/base_dimen_60"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/base_dimen_30"
+            android:src="@drawable/full" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/image_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/base_dimen_60"
+        android:src="@mipmap/orientation_lock_open"/>
+
+
+</RelativeLayout>

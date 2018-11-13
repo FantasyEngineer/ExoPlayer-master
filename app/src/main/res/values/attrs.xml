@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ExoPlayerControlView">
+        <!--快退增量-->
+        <attr name="control_rewind_increment" format="integer" />
+        <!--快进增量-->
+        <attr name="control_fastforward_increment" format="integer" />
+        <!--显示时间(显示这么长时间后隐藏)-->
+        <attr name="control_show_timeout" format="integer" />
+        <!--布局文件，引用R.layout.**-->
+        <attr name="control_controller_layout_id" format="reference" />
+
+        <attr name="control_repeat_toggle_modes">
+            <flag name="none" value="0"/>
+            <flag name="one" value="1"/>
+            <flag name="all" value="2"/>
+        </attr>
+        <!-- shuffle开关当前的状态的属性, true 打开, false 关闭 -->
+        <attr name="control_show_shuffle_button" format="boolean" />
+        <attr name="control_show_preview_button" format="boolean" />
+        <!--屏幕放大缩小-->
+        <attr name="control_full_scrren_drawable" format="reference" />
+        <attr name="control_small_scrren_drawable" format="reference" />
+        <attr name="control_top_container_background" format="reference|color" />
+        <attr name="control_bottom_container_background" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="ExoPlayerView">
+        <!--shutter背景色-->
+        <attr name="view_shutter_background_color" format="color" />
+        <!--布局文件，引用R.layout.**-->
+        <attr name="view_player_layout_id" format="reference" />
+        <attr name="view_use_artwork" format="boolean" />
+        <attr name="view_default_artwork" format="reference" />
+        <attr name="view_use_controller" format="boolean" />
+        <attr name="view_surface_type" format="integer" >
+            <flag name="none" value="0"/>
+            <flag name="surface_view" value="1"/>
+            <flag name="texture_view" value="2"/>
+        </attr>
+        <attr name="view_resize_mode" format="integer" >
+            <flag name="fit" value="0"/>
+            <flag name="fixed_width" value="1"/>
+            <flag name="fixed_height" value="2"/>
+            <flag name="fill" value="3"/>
+            <flag name="zoom" value="4"/>
+        </attr>
+        <!--显示时间(显示这么长时间后隐藏)-->
+        <attr name="view_show_timeout" format="integer" />
+        <attr name="view_hide_on_touch" format="boolean" />
+        <attr name="view_auto_show" format="boolean" />
+        <attr name="view_hide_during_ads" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ControlPanelContainer">
+        <attr name="gestureLevel">
+            <flag name="gestureLevelSingleTap" value="1" />
+            <flag name="gestureLevelDoubleTap" value="2" />
+            <flag name="gestureLevelHorizonScroll" value="4" />
+            <flag name="gestureLevelVerticalScroll" value="8" />
+            <flag name="gestureLevelHorizonScrollLighting" value="16" />
+            <flag name="gestureLevelHorizonScrollSound" value="32" />
+        </attr>
+    </declare-styleable>
+
+</resources>

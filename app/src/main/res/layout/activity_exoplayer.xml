@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constrainlayout"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+
+    <cn.tqp.exoplayer.exoplayerui.ExoPlayerView
+        android:id="@+id/exoplayerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:view_auto_show="true"
+        android:background="#000000">
+    </cn.tqp.exoplayer.exoplayerui.ExoPlayerView>
+
+
+</android.support.constraint.ConstraintLayout>

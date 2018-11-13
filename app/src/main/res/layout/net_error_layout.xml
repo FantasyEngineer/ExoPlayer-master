@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1c1c1c"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/image_net_back"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/base_dimen_100"
+        android:paddingLeft="@dimen/base_dimen_30"
+        android:paddingRight="@dimen/base_dimen_20"
+        app:srcCompat="@drawable/play_ctrl_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/base_dimen_100"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:text="@string/no_net_tip"
+            android:textSize="@dimen/text_15" />
+
+        <TextView
+            android:id="@+id/btn_replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dimen_50"
+            android:textColor="@color/colorWhite"
+            android:paddingTop="@dimen/base_dimen_15"
+            android:paddingBottom="@dimen/base_dimen_15"
+            android:paddingLeft="@dimen/base_dimen_30"
+            android:paddingRight="@dimen/base_dimen_30"
+            android:background="@drawable/button_circular_selector" />
+
+    </LinearLayout>
+</LinearLayout>
